@@ -1,19 +1,21 @@
-
-let hexInput = document.getElementById('hexInput');
-let rgbOutput = document.getElementById('rgbOutput');
+// Declaring variables
+let redOutput = document.getElementById('redOutput');
+let grnOutput = document.getElementById('grnOutput');
+let bluOutput = document.getElementById('bluOutput');
 let calButton = document.getElementById('calButton');
 
-calButton.addEventListener('click', function hexToRgb() {
-  let hexValue = hexInput.value;
+// converting HEX to RGB
+function hexToRgb() {
+    let hex = document.getElementById('hexInput').value;
 
-  if (/^#([0-9A-Fa-f]{3}){1,2}$/.test(hexValue)) {
-    // Extract RGB components from the HEX value
-    let r = parseInt(hexValue.substring(1, 3), 16);
-    let g = parseInt(hexValue.substring(3, 5), 16);
-    let b = parseInt(hexValue.substring(5, 7), 16);
+    // getting red, green, and blue values
+    let red = parseInt(hex.substring(0, 2), 16);
+    let grn = parseInt(hex.substring(2, 4), 16);
+    let blu = parseInt(hex.substring(4, 6), 16);
 
-    rgbOutput.value = `RGB(${r}, ${g}, ${b})`;
-  } else {
-    alert('Please enter a valid HEX color code');
-  }
-});
+    redOutput.value = red;
+    grnOutput.value = grn;
+    bluOutput.value = blu;
+
+calButton.addEventListener('click', hexToRgb);
+}
