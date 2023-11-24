@@ -14,24 +14,37 @@
 <body>
 
     
-    <h1 id = "heading">HEX to RGB Converter</h1>
+    <h1 id = "heading">Hex to RGB Converter</h1>
 
         <center>
 
             <!-- Input and output tags -->
-        <div class="input-group flex-nowrap" id = "input">
-            <span class="input-group-text" id="addon-wrapping">HEX</span>
-            <input type="text" class="form-control" placeholder="Enter Minutes" id = "hexInput" aria-label="Hex" aria-describedby="addon-wrapping">
+
+            <div class="input-group flex-nowrap" id = "input">
+                <span class="input-group-text" id="addon-wrapping">HEX</span>
+                <input type="text" class="form-control" placeholder="Enter Hex" id = "hexInput" aria-label="HEX" aria-describedby="addon-wrapping">
+              </div>
+
+        <div class="input-group flex-nowrap" id = "output">
+            <span class="input-group-text" id="addon-wrapping">R</span>
+            <input type="text" class="form-control"  id = "redOutput" aria-label="RBG" aria-describedby="addon-wrapping">
           </div>
 
           <div class="input-group flex-nowrap" id = "output">
-            <span class="input-group-text" id="addon-wrapping">RGB</span>
-            <input type="text" class="form-control" placeholder="Seconds" id = "rgbOutput" aria-label="RGB" aria-describedby="addon-wrapping">
+            <span class="input-group-text" id="addon-wrapping">G</span>
+            <input type="text" class="form-control" id = "grnOutput" aria-label="RBG" aria-describedby="addon-wrapping">
           </div>
+
+          <div class="input-group flex-nowrap" id = "output">
+            <span class="input-group-text" id="addon-wrapping">B</span>
+            <input type="text" class="form-control"  id = "bluOutput" aria-label="RBG" aria-describedby="addon-wrapping">
+          </div>
+
+          
         </center>
 
         <!-- Button -->
-    <button id = "calButton" type="button" class=" d-grid gap-2 col-6 mx-auto btn btn-outline-light">HEX TO RGB</button>
+    <button id = "calButton" type="button" class=" d-grid gap-2 col-6 mx-auto btn btn-outline-light">HEX to RGB</button>
 
 
 
